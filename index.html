@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vent Line MMC | İsitmə, Soyutma və Havalandırma Sistemləri</title>
+<meta name="description" content="Vent Line MMC — Bakıda peşəkar HVAC şirkəti. İsitmə, soyutma, havalandırma, qazanxana quraşdırılması və yanğından mühafizə sistemləri. Clean Air, Better Life.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0c2947;
+  --navy-deep:#081a30;
+  --blue:#1f7fd1;
+  --blue-dark:#155ea3;
+  --red:#e6342a;
+  --steel:#6f7c8a;
+  --bg-light:#f4f7fa;
+  --ink:#152331;
+  --muted:#5c6b7a;
+  --white:#ffffff;
+  --radius:10px;
+  --swoosh: linear-gradient(90deg, var(--red) 0%, var(--steel) 50%, var(--blue) 100%);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.65;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{
+  font-family:'Montserrat',sans-serif;
+  color:var(--navy);
+  line-height:1.2;
+  margin:0 0 .5em;
+}
+p{margin:0 0 1em;color:var(--muted);}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+.container{width:100%;max-width:1180px;margin:0 auto;padding:0 24px;}
+.section{padding:88px 0;}
+.section-tight{padding:56px 0;}
+.bg-light{background:var(--bg-light);}
+.bg-navy{background:var(--navy);color:#cfd9e3;}
+.bg-navy h2,.bg-navy h3,.bg-navy h4{color:#fff;}
+.bg-navy p{color:#aebccb;}
+
+/* Swoosh divider - the signature brand device, echoes the logo wing */
+.swoosh{
+  width:64px;height:5px;border-radius:3px;
+  background:var(--swoosh);
+  margin-bottom:18px;
+}
+.eyebrow-wrap{max-width:620px;}
+.eyebrow-wrap.center{margin:0 auto;text-align:center;}
+.eyebrow-wrap.center .swoosh{margin-left:auto;margin-right:auto;}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 30px;border-radius:6px;
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.95rem;
+  border:2px solid transparent;cursor:pointer;transition:.25s ease;
+}
+.btn-primary{background:var(--red);color:#fff;}
+.btn-primary:hover{background:#c8281f;transform:translateY(-2px);}
+.btn-outline{border-color:rgba(255,255,255,.55);color:#fff;}
+.btn-outline:hover{background:rgba(255,255,255,.12);}
+.btn-navy{background:var(--navy);color:#fff;}
+.btn-navy:hover{background:var(--navy-deep);transform:translateY(-2px);}
+
+/* Topbar */
+.topbar{
+  background:var(--navy-deep);color:#9fb0c2;font-size:.85rem;
+  padding:8px 0;
+}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+.topbar a{color:#cfd9e3;}
+.topbar .tb-item{display:inline-flex;align-items:center;gap:8px;margin-right:22px;}
+.topbar .tb-item i{color:var(--blue);}
+.topbar .tb-social a{margin-left:14px;color:#9fb0c2;transition:.2s;}
+.topbar .tb-social a:hover{color:var(--blue);}
+
+/* Navbar */
+.navbar{
+  position:sticky;top:0;z-index:1000;
+  background:#fff;box-shadow:0 2px 14px rgba(12,41,71,.08);
+}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;}
+.brand img{height:46px;}
+.nav-links{display:flex;align-items:center;gap:30px;}
+.nav-links a{
+  font-family:'Montserrat',sans-serif;font-weight:600;font-size:.92rem;
+  color:var(--navy);position:relative;padding:6px 0;
+}
+.nav-links a::after{
+  content:'';position:absolute;left:0;bottom:0;height:2px;width:0;
+  background:var(--red);transition:.25s;
+}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{display:flex;align-items:center;gap:16px;}
+.nav-phone{display:flex;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-weight:700;color:var(--navy);}
+.nav-phone i{
+  width:38px;height:38px;border-radius:50%;background:var(--bg-light);
+  display:flex;align-items:center;justify-content:center;color:var(--blue);
+}
+.nav-toggle{display:none;background:none;border:none;font-size:1.5rem;color:var(--navy);cursor:pointer;}
+
+@media(max-width:960px){
+  .topbar{display:none;}
+  .nav-links{
+    position:fixed;top:0;right:-100%;height:100vh;width:78%;max-width:320px;
+    background:#fff;flex-direction:column;justify-content:center;align-items:flex-start;
+    padding:40px;gap:26px;transition:right .35s ease;box-shadow:-8px 0 30px rgba(0,0,0,.15);
+  }
+  .nav-links.open{right:0;}
+  .nav-phone span{display:none;}
+  .nav-toggle{display:block;}
+  .nav-overlay{display:none;position:fixed;inset:0;background:rgba(8,26,48,.5);z-index:999;}
+  .nav-overlay.open{display:block;}
+}
+
+/* Hero */
+.hero{
+  position:relative;background:var(--navy);color:#fff;
+  min-height:88vh;display:flex;align-items:center;overflow:hidden;
+}
+.hero-photo{
+  position:absolute;inset:0 0 0 52%;
+  clip-path:polygon(14% 0,100% 0,100% 100%,0% 100%);
+}
+.hero-photo img{width:100%;height:100%;object-fit:cover;}
+.hero-photo::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(100deg, var(--navy) 0%, rgba(12,41,71,.55) 38%, rgba(12,41,71,.15) 100%);
+}
+@media(max-width:860px){
+  .hero-photo{clip-path:none;inset:0;opacity:.22;}
+}
+.hero .container{position:relative;z-index:2;}
+.hero-inner{max-width:640px;padding:60px 0;}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;letter-spacing:.03em;
+  color:#bcd3ea;background:rgba(255,255,255,.08);
+  padding:8px 16px;border-radius:30px;margin-bottom:22px;
+}
+.hero-tag .dot{width:8px;height:8px;border-radius:50%;background:var(--red);}
+.hero h1{
+  color:#fff;font-size:clamp(2.1rem,4.2vw,3.1rem);font-weight:800;margin-bottom:20px;
+}
+.hero h1 .accent{color:var(--blue);}
+.hero p.lead{color:#c3d2e0;font-size:1.08rem;max-width:520px;}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin:30px 0 44px;}
+.hero-stats{display:flex;gap:36px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.15);padding-top:28px;}
+.hero-stats .stat b{
+  display:block;font-family:'Montserrat',sans-serif;font-size:1.7rem;font-weight:800;color:#fff;
+}
+.hero-stats .stat span{font-size:.85rem;color:#a9bbcd;}
+
+/* Trust strip */
+.trust-strip{background:#fff;border-bottom:1px solid #eef1f4;padding:22px 0;}
+.trust-strip .container{display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:10px;color:var(--navy);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.88rem;opacity:.85;}
+.trust-item i{color:var(--blue);font-size:1.1rem;}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px;}}
+.value-card{
+  display:flex;gap:18px;padding:22px 0;border-bottom:1px solid #e7ecf1;
+}
+.value-card:last-child{border-bottom:none;}
+.value-card .vc-icon{
+  flex-shrink:0;width:52px;height:52px;border-radius:12px;
+  background:var(--bg-light);display:flex;align-items:center;justify-content:center;
+  color:var(--blue);font-size:1.3rem;
+}
+.value-card h4{margin-bottom:6px;font-size:1.05rem;}
+.value-card p{margin:0;font-size:.94rem;}
+
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:60px;padding-top:48px;border-top:1px solid #e7ecf1;}
+@media(max-width:760px){.stat-row{grid-template-columns:repeat(2,1fr);}}
+.stat-box{text-align:center;}
+.stat-box b{
+  display:block;font-family:'Montserrat',sans-serif;font-size:2.4rem;font-weight:800;color:var(--navy);
+}
+.stat-box b span{color:var(--red);}
+.stat-box p{margin:6px 0 0;font-size:.88rem;color:var(--muted);}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+@media(max-width:900px){.services-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.services-grid{grid-template-columns:1fr;}}
+.service-card{
+  background:#fff;border:1px solid #e7ecf1;border-radius:var(--radius);
+  padding:34px 28px;transition:.3s ease;position:relative;overflow:hidden;
+}
+.service-card:hover{
+  transform:translateY(-6px);box-shadow:0 18px 40px rgba(12,41,71,.12);border-color:transparent;
+}
+.service-card .sc-icon{
+  width:58px;height:58px;border-radius:14px;
+  background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:20px;
+}
+.service-card:nth-child(3n+2) .sc-icon{background:var(--blue);}
+.service-card:nth-child(3n+3) .sc-icon{background:var(--red);}
+.service-card h3{font-size:1.12rem;margin-bottom:10px;}
+.service-card p{font-size:.92rem;margin:0;}
+
+/* Why us */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;}
+@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.why-grid{grid-template-columns:1fr;}}
+.why-item{text-align:left;}
+.why-item i{font-size:1.8rem;color:var(--blue);margin-bottom:16px;display:block;}
+.why-item h4{color:#fff;font-size:1.05rem;margin-bottom:8px;}
+.why-item p{color:#a9bbcd;font-size:.92rem;margin:0;}
+
+/* Partners */
+.partners-strip{padding:44px 0;border-top:1px solid #eef1f4;border-bottom:1px solid #eef1f4;}
+.partners-row{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+.partner-chip{
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.92rem;color:var(--navy);
+  padding:10px 22px;border:1.5px solid #dde5ec;border-radius:30px;background:#fff;
+}
+
+/* Projects */
+.project-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px;}
+.project-grid .pg-item:nth-child(1),.project-grid .pg-item:nth-child(6){grid-column:span 2;grid-row:span 2;}
+@media(max-width:960px){
+  .project-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px;}
+  .project-grid .pg-item:nth-child(1),.project-grid .pg-item:nth-child(6){grid-column:span 2;grid-row:span 1;}
+}
+@media(max-width:560px){
+  .project-grid{grid-template-columns:1fr;}
+  .project-grid .pg-item:nth-child(1),.project-grid .pg-item:nth-child(6){grid-column:span 1;}
+}
+.pg-item{position:relative;border-radius:var(--radius);overflow:hidden;cursor:default;}
+.pg-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.pg-item:hover img{transform:scale(1.08);}
+.pg-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(0deg, rgba(8,26,48,.92) 0%, rgba(8,26,48,.15) 55%, rgba(8,26,48,0) 100%);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:18px;color:#fff;
+}
+.pg-overlay .pg-tag{
+  font-size:.72rem;font-weight:700;letter-spacing:.02em;color:var(--blue);
+  font-family:'Montserrat',sans-serif;margin-bottom:4px;
+}
+.pg-overlay h4{color:#fff;font-size:1rem;margin:0 0 2px;}
+.pg-overlay span{font-size:.8rem;color:#c3d2e0;}
+
+/* Certificates */
+.cert-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+@media(max-width:760px){.cert-row{grid-template-columns:1fr;}}
+.cert-card{
+  border:1.5px solid #e7ecf1;border-radius:var(--radius);padding:28px;text-align:center;
+  transition:.25s;
+}
+.cert-card:hover{border-color:var(--blue);}
+.cert-card i{font-size:2rem;color:var(--blue);margin-bottom:14px;}
+.cert-card h4{font-size:1rem;margin-bottom:6px;}
+.cert-card p{font-size:.85rem;margin:0;}
+
+/* Contact */
+.contact-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;}
+@media(max-width:900px){.contact-wrap{grid-template-columns:1fr;}}
+.contact-info-card{
+  background:var(--navy);color:#fff;border-radius:var(--radius);padding:40px 32px;
+}
+.contact-info-card h3{color:#fff;}
+.ci-row{display:flex;gap:16px;margin-bottom:26px;align-items:flex-start;}
+.ci-row i{
+  width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:center;color:var(--blue);flex-shrink:0;
+}
+.ci-row h5{margin:0 0 4px;color:#fff;font-family:'Montserrat',sans-serif;font-size:.92rem;}
+.ci-row p, .ci-row a{margin:0;font-size:.92rem;color:#c3d2e0;}
+.ci-map{margin-top:8px;border-radius:8px;overflow:hidden;height:160px;}
+.ci-map iframe{width:100%;height:100%;border:0;filter:grayscale(.2);}
+
+.form-card{background:#fff;border:1px solid #e7ecf1;border-radius:var(--radius);padding:40px 34px;box-shadow:0 20px 50px rgba(12,41,71,.06);}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media(max-width:560px){.form-grid{grid-template-columns:1fr;}}
+.form-field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px;}
+.form-field.full{grid-column:1/-1;}
+.form-field label{font-size:.85rem;font-weight:600;color:var(--navy);}
+.form-field input,.form-field select,.form-field textarea{
+  border:1.5px solid #dde5ec;border-radius:6px;padding:12px 14px;font-family:'Inter',sans-serif;
+  font-size:.95rem;color:var(--ink);background:#fbfcfd;transition:.2s;
+}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{
+  outline:none;border-color:var(--blue);background:#fff;
+}
+#formMsg{margin-top:14px;font-size:.9rem;font-weight:600;display:none;}
+#formMsg.ok{color:#1e8a4c;display:block;}
+#formMsg.err{color:var(--red);display:block;}
+
+/* CTA band */
+.cta-band{
+  background:linear-gradient(120deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color:#fff;padding:60px 0;position:relative;overflow:hidden;
+}
+.cta-band::before{
+  content:'';position:absolute;right:-60px;top:-60px;width:300px;height:300px;
+  border-radius:50%;background:radial-gradient(circle, rgba(31,127,209,.25), transparent 70%);
+}
+.cta-flex{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;position:relative;z-index:1;}
+.cta-flex h3{color:#fff;margin-bottom:6px;}
+.cta-flex p{margin:0;color:#a9bbcd;}
+
+/* Footer */
+footer{background:var(--navy-deep);color:#8ea0b3;padding:70px 0 0;}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.08);}
+@media(max-width:860px){.footer-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:560px){.footer-grid{grid-template-columns:1fr;}}
+.footer-grid img{height:42px;margin-bottom:16px;}
+.footer-grid h5{color:#fff;font-family:'Montserrat',sans-serif;font-size:.95rem;margin-bottom:18px;}
+.footer-grid ul{list-style:none;padding:0;margin:0;}
+.footer-grid li{margin-bottom:12px;font-size:.9rem;}
+.footer-grid a:hover{color:var(--blue);}
+.footer-social{display:flex;gap:10px;margin-top:18px;}
+.footer-social a{
+  width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);
+  display:flex;align-items:center;justify-content:center;transition:.2s;
+}
+.footer-social a:hover{background:var(--blue);color:#fff;}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+  padding:22px 0;font-size:.82rem;
+}
+
+/* WhatsApp float */
+.wa-float{
+  position:fixed;bottom:26px;right:26px;z-index:1500;
+  width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1.6rem;
+  box-shadow:0 8px 24px rgba(37,211,102,.45);
+  animation:pulse-wa 2.4s infinite;
+}
+@keyframes pulse-wa{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.55);}
+  70%{box-shadow:0 0 0 14px rgba(37,211,102,0);}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}
+}
+.back-top{
+  position:fixed;bottom:26px;right:94px;z-index:1500;width:46px;height:46px;border-radius:50%;
+  background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:.3s;
+}
+.back-top.show{opacity:1;pointer-events:auto;}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+.reveal-stagger.in-view > *{opacity:1;transform:translateY(0);}
+.reveal-stagger > *{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+.reveal-stagger.in-view > *:nth-child(1){transition-delay:.05s;}
+.reveal-stagger.in-view > *:nth-child(2){transition-delay:.15s;}
+.reveal-stagger.in-view > *:nth-child(3){transition-delay:.25s;}
+.reveal-stagger.in-view > *:nth-child(4){transition-delay:.35s;}
+.reveal-stagger.in-view > *:nth-child(5){transition-delay:.45s;}
+.reveal-stagger.in-view > *:nth-child(6){transition-delay:.55s;}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal,.reveal-stagger > *{opacity:1 !important;transform:none !important;transition:none !important;}
+  .wa-float{animation:none;}
+}
+
+.section-head{margin-bottom:48px;}
+</style>
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  <div class="container">
+    <div>
+      <span class="tb-item"><i class="fa-solid fa-phone"></i> +994 12 000 00 00</span>
+      <span class="tb-item"><i class="fa-solid fa-envelope"></i> info@ventline.az</span>
+      <span class="tb-item"><i class="fa-solid fa-location-dot"></i> Bakı, Azərbaycan</span>
+    </div>
+    <div class="tb-social">
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container">
+    <a href="#top" class="brand"><img src="assets/logo-full.png" alt="Vent Line MMC"></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about" class="nav-link-item">Haqqımızda</a>
+      <a href="#services" class="nav-link-item">Xidmətlər</a>
+      <a href="#projects" class="nav-link-item">Layihələr</a>
+      <a href="#quality" class="nav-link-item">Keyfiyyət</a>
+      <a href="#contact" class="nav-link-item">Əlaqə</a>
+    </div>
+    <div class="nav-cta">
+      <a href="tel:+994120000000" class="nav-phone"><i class="fa-solid fa-phone"></i><span>+994 12 000 00 00</span></a>
+      <a href="#contact" class="btn btn-primary" style="padding:11px 22px;">Pulsuz Təklif</a>
+      <button class="nav-toggle" id="navToggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-overlay" id="navOverlay"></div>
+
+<!-- Hero -->
+<header class="hero" id="top">
+  <div class="hero-photo"><img src="assets/hero-duct.jpg" alt="Vent Line HVAC quraşdırma"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-tag"><span class="dot"></span> HEATING · COOLING · VENTILATION</div>
+      <h1>Təmiz hava, <span class="accent">daha yaxşı</span> həyat</h1>
+      <p class="lead">Vent Line MMC — istismə, soyutma, havalandırma, qazanxana və yanğından mühafizə sistemlərinin layihələndirilməsi və quraşdırılması üzrə ölkənin etibarlı mühəndislik şirkəti.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Pulsuz Təklif Alın <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#services" class="btn btn-outline">Xidmətlərimiz</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b class="counter" data-target="8">0</b><span>İl Təcrübə</span></div>
+        <div class="stat"><b class="counter" data-target="50">0</b><span>Tamamlanmış Layihə</span></div>
+        <div class="stat"><b class="counter" data-target="30">0</b><span>Peşəkar Mütəxəssis</span></div>
+        <div class="stat"><b class="counter" data-target="3">0</b><span>ISO Sertifikatı</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Trust strip -->
+<div class="trust-strip">
+  <div class="container">
+    <div class="trust-item"><i class="fa-solid fa-award"></i> ISO 9001:2015</div>
+    <div class="trust-item"><i class="fa-solid fa-leaf"></i> ISO 14001:2015</div>
+    <div class="trust-item"><i class="fa-solid fa-shield-halved"></i> ISO 45001:2018</div>
+    <div class="trust-item"><i class="fa-solid fa-fire-flame-curved"></i> Yanğından Mühafizə Sertifikatlı</div>
+    <div class="trust-item"><i class="fa-solid fa-industry"></i> Daikin · Carrier · Danfoss Partnyoru</div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="eyebrow-wrap">
+          <div class="swoosh"></div>
+          <h2>Baxışımız və Məqsədimiz</h2>
+          <p>İsitmə, soyutma, havalandırma, yanğın-mühafizə sistemləri və qazanxana xidmətləri sahəsində innovativ texnologiyalar və yüksək keyfiyyət standartları ilə Azərbaycanın aparıcı və etibarlı mühəndislik brendinə çevrilmək — bizim baxışımızdır.</p>
+          <p>Məqsədimiz müştərilərimizə enerjiyə qənaət edən, təhlükəsiz və müasir HVAC həlləri təqdim edərək yaşayış və iş məkanlarında maksimum rahatlıq və etibarlılıq təmin etməkdir.</p>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="value-card">
+          <div class="vc-icon"><i class="fa-solid fa-handshake"></i></div>
+          <div><h4>Etimad və Etibarlılıq</h4><p>Hər bir layihədə standartlara və təhlükəsizlik qaydalarına tam əməl edirik, öhdəliklərimizə sözsüz sadiqik.</p></div>
+        </div>
+        <div class="value-card">
+          <div class="vc-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <div><h4>İnnovasiya və İnkişaf</h4><p>Müasir texnologiyalarla qürur duyur, enerji-effektiv avadanlıqları müntəzəm izləyib layihələrimizdə tətbiq edirik.</p></div>
+        </div>
+        <div class="value-card">
+          <div class="vc-icon"><i class="fa-solid fa-star"></i></div>
+          <div><h4>Yüksək Keyfiyyət və Peşəkarlıq</h4><p>Qazanxana və yanğın siqnalizasiya sistemlərinin quraşdırılmasından servisə qədər hər mərhələdə dəqiqlik göstəririk.</p></div>
+        </div>
+        <div class="value-card">
+          <div class="vc-icon"><i class="fa-solid fa-users"></i></div>
+          <div><h4>Komanda İşi və Əməkdaşlıq</h4><p>Sifarişçilərimiz və tərəfdaşlarımızla qarşılıqlı hörmət və şəffaflıq əsasında uzunmüddətli əlaqələr qururuq.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stat-row reveal-stagger">
+      <div class="stat-box"><b>8<span>+</span></b><p>İl Təcrübə</p></div>
+      <div class="stat-box"><b>50<span>+</span></b><p>Tamamlanmış Layihə</p></div>
+      <div class="stat-box"><b>30<span>+</span></b><p>Peşəkar Mütəxəssis</p></div>
+      <div class="stat-box"><b>100<span>%</span></b><p>Müştəri Məmnuniyyəti</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section bg-light" id="services">
+  <div class="container">
+    <div class="eyebrow-wrap center section-head reveal">
+      <div class="swoosh"></div>
+      <h2>Xidmət Sahələrimiz</h2>
+      <p>Layihələndirmədən quraşdırılmaya, servis dəstəyinə qədər HVAC sisteminizin bütün mərhələlərini bir şirkətdən əldə edin.</p>
+    </div>
+    <div class="services-grid reveal-stagger">
+      <div class="service-card">
+        <div class="sc-icon"><i class="fa-solid fa-fire"></i></div>
+        <h3>İsitmə Sistemləri</h3>
+        <p>Yaşayış və sənaye obyektləri üçün mərkəzi isitmə sistemlərinin layihələndirilməsi, quraşdırılması və servisi.</p>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon"><i class="fa-solid fa-snowflake"></i></div>
+        <h3>Soyutma Sistemləri</h3>
+        <p>Ofis, ticarət mərkəzi və sənaye sahələri üçün müasir soyutma və kondisioner həlləri.</p>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon"><i class="fa-solid fa-wind"></i></div>
+        <h3>Havalandırma (HVAC)</h3>
+        <p>Təmiz hava dövriyyəsi üçün tam HVAC layihələndirilməsi, quraşdırılması və saxlanılması xidmətləri.</p>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon"><i class="fa-solid fa-gauge-high"></i></div>
+        <h3>Qazanxana Quraşdırılması</h3>
+        <p>Sənaye və inzibati binalar üçün qazanxana avadanlığının layihələndirilməsi və texniki quraşdırılması.</p>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon"><i class="fa-solid fa-fire-extinguisher"></i></div>
+        <h3>Yanğından Mühafizə</h3>
+        <p>Yanğın siqnalizasiya və mühafizə sistemlərinin layihələndirilməsi, quraşdırılması və servis dəstəyi.</p>
+      </div>
+      <div class="service-card">
+        <div class="sc-icon"><i class="fa-solid fa-building-shield"></i></div>
+        <h3>Binaların İdarə Edilməsi</h3>
+        <p>Kommersiya və sənaye binaları üçün mühəndis sistemlərinin əməliyyat idarəetməsi və texniki dəstəyi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why us -->
+<section class="section bg-navy">
+  <div class="container">
+    <div class="eyebrow-wrap center section-head reveal">
+      <div class="swoosh"></div>
+      <h2>Niyə Vent Line MMC?</h2>
+      <p>Keyfiyyət siyasətimizin əsasında sıfır xəta və yüksək müştəri məmnuniyyəti dayanır.</p>
+    </div>
+    <div class="why-grid reveal-stagger">
+      <div class="why-item">
+        <i class="fa-solid fa-user-tie"></i>
+        <h4>Peşəkar Heyət</h4>
+        <p>Dinamik, müasir iş prinsiplərinə yiyələnmiş təcrübəli mühəndis və mütəxəssis komandası.</p>
+      </div>
+      <div class="why-item">
+        <i class="fa-solid fa-arrow-trend-up"></i>
+        <h4>Davamlı İnkişaf</h4>
+        <p>Əməkdaşlarımızın peşəkarlığını artırmaq üçün müntəzəm təlimlər və keyfiyyət standartları.</p>
+      </div>
+      <div class="why-item">
+        <i class="fa-solid fa-scale-balanced"></i>
+        <h4>Qanunvericiliyə Uyğunluq</h4>
+        <p>Bütün xidmətlər tikinti normativlərinə və beynəlxalq standartlara tam uyğun həyata keçirilir.</p>
+      </div>
+      <div class="why-item">
+        <i class="fa-solid fa-leaf"></i>
+        <h4>Ətraf Mühitin Qorunması</h4>
+        <p>Havalandırma həllərimizdə ekoloji təsirləri minimuma endirən enerji-effektiv texnologiyalar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Partners -->
+<div class="partners-strip">
+  <div class="container">
+    <div class="partners-row reveal-stagger">
+      <span class="partner-chip">Daikin</span>
+      <span class="partner-chip">Midea</span>
+      <span class="partner-chip">Carrier</span>
+      <span class="partner-chip">Danfoss</span>
+      <span class="partner-chip">Systemair</span>
+      <span class="partner-chip">Gree</span>
+      <span class="partner-chip">Mitsubishi</span>
+      <span class="partner-chip">Bosch</span>
+    </div>
+  </div>
+</div>
+
+<!-- Projects -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="eyebrow-wrap center section-head reveal">
+      <div class="swoosh"></div>
+      <h2>Seçilmiş Layihələrimiz</h2>
+      <p>Sənaye, təhsil, qonaqlama və dövlət obyektlərində reallaşdırdığımız layihələrdən bəziləri.</p>
+    </div>
+    <div class="project-grid reveal-stagger">
+      <div class="pg-item">
+        <img src="assets/projects/coca-cola.jpg" alt="Coca-Cola Bottlers Azerbaijan">
+        <div class="pg-overlay"><div class="pg-tag">SƏNAYE OBYEKTİ</div><h4>Coca-Cola Bottlers Azerbaijan</h4><span>İsmayıllı, Azərbaycan</span></div>
+      </div>
+      <div class="pg-item">
+        <img src="assets/projects/oxford-school-1.jpg" alt="Bakı Oksford Məktəbi">
+        <div class="pg-overlay"><div class="pg-tag">TƏHSİL</div><h4>Bakı Oksford Məktəbi</h4><span>Bakı, Azərbaycan</span></div>
+      </div>
+      <div class="pg-item">
+        <img src="assets/projects/sapphire-hotel.jpg" alt="Sapphire Hotel">
+        <div class="pg-overlay"><div class="pg-tag">QONAQLAMA</div><h4>Sapphire Hotel</h4><span>Bakı, Azərbaycan</span></div>
+      </div>
+      <div class="pg-item">
+        <img src="assets/projects/baku-steel.jpg" alt="Baku Steel Company">
+        <div class="pg-overlay"><div class="pg-tag">SƏNAYE</div><h4>Baku Steel Company</h4><span>Bakı, Azərbaycan</span></div>
+      </div>
+      <div class="pg-item">
+        <img src="assets/projects/heyderaliyev-zavod.jpg" alt="Heydər Əliyev adına Dərin Özüllər Zavodu">
+        <div class="pg-overlay"><div class="pg-tag">SƏNAYE</div><h4>H. Əliyev ad. Dərin Özüllər Zavodu</h4><span>Bakı, Azərbaycan</span></div>
+      </div>
+      <div class="pg-item">
+        <img src="assets/projects/xocali-school-1.jpg" alt="Xocalı 1 nömrəli tam orta məktəb">
+        <div class="pg-overlay"><div class="pg-tag">TƏHSİL</div><h4>Xocalı 1 Nöm. Tam Orta Məktəb</h4><span>Xocalı, Azərbaycan</span></div>
+      </div>
+      <div class="pg-item">
+        <img src="assets/projects/batigoz.jpg" alt="Batıgöz Tibb Mərkəzi">
+        <div class="pg-overlay"><div class="pg-tag">TİBB</div><h4>Batıgöz Tibb Mərkəzi</h4><span>Bakı, Azərbaycan</span></div>
+      </div>
+      <div class="pg-item">
+        <img src="assets/projects/nesimi-icra.jpg" alt="Nəsimi Rayon İcra Hakimiyyəti">
+        <div class="pg-overlay"><div class="pg-tag">DÖVLƏT</div><h4>Nəsimi Rayon İcra Hakimiyyəti</h4><span>Bakı, Azərbaycan</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certificates -->
+<section class="section bg-light" id="quality">
+  <div class="container">
+    <div class="eyebrow-wrap center section-head reveal">
+      <div class="swoosh"></div>
+      <h2>Keyfiyyət Siyasətimiz</h2>
+      <p>Bütün proseslərimiz beynəlxalq idarəetmə standartlarına uyğun sertifikatlaşdırılıb.</p>
+    </div>
+    <div class="cert-row reveal-stagger">
+      <div class="cert-card">
+        <i class="fa-solid fa-certificate"></i>
+        <h4>ISO 9001:2015</h4>
+        <p>Keyfiyyət İdarəetmə Sistemi</p>
+      </div>
+      <div class="cert-card">
+        <i class="fa-solid fa-leaf"></i>
+        <h4>ISO 14001:2015</h4>
+        <p>Ətraf Mühitin İdarə Edilməsi</p>
+      </div>
+      <div class="cert-card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h4>ISO 45001:2018</h4>
+        <p>Əməyin Təhlükəsizliyi və Sağlamlıq</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<div class="cta-band">
+  <div class="container">
+    <div class="cta-flex reveal">
+      <div>
+        <h3>Layihəniz üçün pulsuz məsləhət lazımdır?</h3>
+        <p>Komandamız 24 saat ərzində sizinlə əlaqə saxlayıb ilkin qiymətləndirmə aparacaq.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary">İndi Sorğu Göndərin <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Contact -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="eyebrow-wrap center section-head reveal">
+      <div class="swoosh"></div>
+      <h2>Bizimlə Əlaqə</h2>
+      <p>Sualınız var və ya təklif almaq istəyirsiniz? Formu doldurun, tez zamanda geri dönüş edək.</p>
+    </div>
+    <div class="contact-wrap">
+      <div class="reveal">
+        <div class="contact-info-card">
+          <h3>Əlaqə Məlumatları</h3>
+          <div class="ci-row">
+            <i class="fa-solid fa-phone"></i>
+            <div><h5>Telefon</h5><a href="tel:+994120000000">+994 (12) 000 00 00</a></div>
+          </div>
+          <div class="ci-row">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><h5>WhatsApp</h5><a href="https://wa.me/994500000000" target="_blank">+994 (50) 000 00 00</a></div>
+          </div>
+          <div class="ci-row">
+            <i class="fa-solid fa-envelope"></i>
+            <div><h5>E-poçt</h5><a href="mailto:info@ventline.az">info@ventline.az</a></div>
+          </div>
+          <div class="ci-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><h5>Ünvan</h5><p>Bakı şəhəri, Azərbaycan</p></div>
+          </div>
+          <div class="ci-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97031.55!2d49.8422!3d40.4093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d4b940169e5%3A0x4c145b1113bfc888!2sBaku%2C%20Azerbaijan!5e0!3m2!1sen!2sus!4v1700000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="form-card">
+          <form id="contactForm" action="https://formsubmit.co/info@ventline.az" method="POST">
+            <input type="hidden" name="_subject" value="Yeni sorğu — Vent Line MMC saytı">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="fname">Adınız *</label>
+                <input type="text" id="fname" name="Ad Soyad" required placeholder="Ad Soyad">
+              </div>
+              <div class="form-field">
+                <label for="fphone">Telefon *</label>
+                <input type="tel" id="fphone" name="Telefon" required placeholder="+994 __ ___ __ __">
+              </div>
+              <div class="form-field">
+                <label for="femail">E-poçt *</label>
+                <input type="email" id="femail" name="Email" required placeholder="e-poçt@nümunə.az">
+              </div>
+              <div class="form-field">
+                <label for="fservice">Xidmət Növü</label>
+                <select id="fservice" name="Xidmet Novu">
+                  <option>İsitmə Sistemləri</option>
+                  <option>Soyutma Sistemləri</option>
+                  <option>Havalandırma (HVAC)</option>
+                  <option>Qazanxana Quraşdırılması</option>
+                  <option>Yanğından Mühafizə</option>
+                  <option>Digər</option>
+                </select>
+              </div>
+              <div class="form-field full">
+                <label for="fmsg">Mesajınız *</label>
+                <textarea id="fmsg" name="Mesaj" rows="5" required placeholder="Layihəniz haqqında qısa məlumat yazın..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-navy" style="width:100%;justify-content:center;">Mesajı Göndər <i class="fa-solid fa-paper-plane"></i></button>
+            <div id="formMsg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="assets/logo-full.png" alt="Vent Line MMC">
+        <p style="color:#8ea0b3;font-size:.92rem;">İsitmə, soyutma, havalandırma və yanğından mühafizə sistemləri üzrə peşəkar mühəndislik həlləri. Clean Air, Better Life.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/994500000000" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div>
+        <h5>Keçidlər</h5>
+        <ul>
+          <li><a href="#about">Haqqımızda</a></li>
+          <li><a href="#services">Xidmətlər</a></li>
+          <li><a href="#projects">Layihələr</a></li>
+          <li><a href="#contact">Əlaqə</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Xidmətlər</h5>
+        <ul>
+          <li><a href="#services">İsitmə Sistemləri</a></li>
+          <li><a href="#services">Soyutma Sistemləri</a></li>
+          <li><a href="#services">Havalandırma (HVAC)</a></li>
+          <li><a href="#services">Yanğından Mühafizə</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Əlaqə</h5>
+        <ul>
+          <li><i class="fa-solid fa-phone" style="color:var(--blue);margin-right:8px;"></i>+994 (12) 000 00 00</li>
+          <li><i class="fa-solid fa-envelope" style="color:var(--blue);margin-right:8px;"></i>info@ventline.az</li>
+          <li><i class="fa-solid fa-location-dot" style="color:var(--blue);margin-right:8px;"></i>Bakı, Azərbaycan</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Vent Line MMC. Bütün hüquqlar qorunur.</span>
+      <span>ISO 9001 · ISO 14001 · ISO 45001 Sertifikatlı</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/994500000000" target="_blank" class="wa-float" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+<a href="#top" class="back-top" id="backTop" aria-label="Yuxarı qalx"><i class="fa-solid fa-arrow-up"></i></a>
+
+<script>
+// Mobile nav
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+const navOverlay = document.getElementById('navOverlay');
+function closeNav(){navLinks.classList.remove('open');navOverlay.classList.remove('open');}
+navToggle.addEventListener('click', ()=>{navLinks.classList.toggle('open');navOverlay.classList.toggle('open');});
+navOverlay.addEventListener('click', closeNav);
+document.querySelectorAll('.nav-link-item').forEach(a=>a.addEventListener('click', closeNav));
+
+// Back to top
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', ()=>{
+  backTop.classList.toggle('show', window.scrollY > 500);
+});
+
+// Reveal on scroll
+const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('in-view');
+      io.unobserve(entry.target);
+    }
+  });
+}, {threshold:.15});
+revealEls.forEach(el=>io.observe(el));
+
+// Counter animation
+const counters = document.querySelectorAll('.counter');
+const counterIO = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      const el = entry.target;
+      const target = parseInt(el.dataset.target,10);
+      let cur = 0;
+      const step = Math.max(1, Math.ceil(target/40));
+      const timer = setInterval(()=>{
+        cur += step;
+        if(cur >= target){cur = target; clearInterval(timer);}
+        el.textContent = cur;
+      }, 35);
+      counterIO.unobserve(el);
+    }
+  });
+}, {threshold:.5});
+counters.forEach(el=>counterIO.observe(el));
+
+// Footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Contact form (FormSubmit AJAX)
+const form = document.getElementById('contactForm');
+const formMsg = document.getElementById('formMsg');
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  const data = new FormData(form);
+  formMsg.className = '';
+  formMsg.style.display = 'none';
+  fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: {'Accept':'application/json'}
+  }).then(res=>{
+    if(res.ok){
+      formMsg.textContent = 'Təşəkkürlər! Mesajınız göndərildi, tezliklə sizinlə əlaqə saxlayacağıq.';
+      formMsg.className = 'ok';
+      form.reset();
+    } else {
+      formMsg.textContent = 'Xəta baş verdi. Zəhmət olmasa birbaşa info@ventline.az ünvanına yazın.';
+      formMsg.className = 'err';
+    }
+  }).catch(()=>{
+    formMsg.textContent = 'Xəta baş verdi. Zəhmət olmasa birbaşa info@ventline.az ünvanına yazın.';
+    formMsg.className = 'err';
+  });
+});
+</script>
+</body>
+</html>
